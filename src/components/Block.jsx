@@ -67,7 +67,7 @@ function Block({ block }) {
               danger
               type="default"
             >
-              {isHacking ? "Hacking..." : "Hack"}
+              {isHacking ? "Save" : "Hack"}
             </Button>
           </div>
         </div>
