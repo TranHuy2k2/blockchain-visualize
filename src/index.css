@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.spacer {
+  aspect-ratio: 600/160;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.layer {
+  background-image: url("./assets/images/layered-waves-haikei.svg");
+  overflow: hidden;
+}
+.header-container {
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
