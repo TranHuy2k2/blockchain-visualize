@@ -5,7 +5,7 @@ import {
   DollarCircleOutlined,
 } from "@ant-design/icons";
 import { useState } from "react";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs/esm/index.js";
 function Block({ block }) {
   const [isHacking, setHacking] = useState(false);
   const [data, setData] = useState({
