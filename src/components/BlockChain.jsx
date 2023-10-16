@@ -24,7 +24,7 @@ function BlockchainComponent() {
   const [blockchain, setBlockchain] = useState(new BlockChain());
   const [autoAnimateParent] = useAutoAnimate();
   const [isOpen, setOpen] = useState(false);
-  const [messageApi, contextHolder] = message.useMessage();
+  const [messageApi, contextHolder] = message.useMessage({ duration: 5 });
   const [data, setData] = useState({
     id: null,
     money: null,
@@ -37,7 +37,6 @@ function BlockchainComponent() {
   const openModal = () => {};
 
   const addBlock = () => {
-    console.log(data);
     if (!data.id || !data.money) {
       return messageApi.open({
         type: "error",

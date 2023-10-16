@@ -5,6 +5,7 @@ import {
   DollarCircleOutlined,
 } from "@ant-design/icons";
 import { useState } from "react";
+import * as dayjs from "dayjs";
 function Block({ block }) {
   const [isHacking, setHacking] = useState(false);
   const [data, setData] = useState({
@@ -17,11 +18,19 @@ function Block({ block }) {
       title={<p className="text-center">{`${block.hash}`}</p>}
     >
       {block.isGenesis ? (
-        <p className="text-center text-2xl font-bold">Genesis Block</p>
+        <div>
+          <p className="text-center text-2xl font-bold my-0">Genesis Block</p>
+          <p className="italic text-center">
+            {dayjs(block.timestamp).format("DD-MM-YYYY HH:mm:ss")}
+          </p>
+        </div>
       ) : (
         <div>
-          <p className="text-center text-2xl font-bold mb-2">
+          <p className="text-center text-2xl font-bold my-0">
             Block #{block.index}
+          </p>
+          <p className="italic text-center mb-2">
+            {dayjs(block.timestamp).format("DD-MM-YYYY HH:mm:ss")}
           </p>
           <Input
             className="w-full mt-2"
